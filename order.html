@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Place Order - GymPro</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Page-specific form styling */
+    .order-form {
+      max-width: 600px;
+      margin: 4rem auto;
+      background-color: #fff;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .order-form h2 {
+      text-align: center;
+      color: #5682B1;
+      margin-bottom: 1.5rem;
+    }
+
+    .order-form label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+      color: #000;
+    }
+
+    .order-form input,
+    .order-form select,
+    .order-form textarea {
+      width: 100%;
+      padding: 0.8rem;
+      margin-bottom: 1.2rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .order-form textarea {
+      resize: vertical;
+      height: 100px;
+    }
+
+    .order-form button {
+      background-color: #5682B1;
+      color: white;
+      border: none;
+      padding: 0.8rem 1.5rem;
+      font-size: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .order-form button:hover {
+      background-color: #739EC9;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <h1>GymPro</h1>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="order.html">Order</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Order Form -->
+  <section class="order-form">
+    <h2>Place Your Order</h2>
+    <form action="#" method="post">
+      <!-- Product Selection -->
+      <label for="product">Select Product</label>
+      <select id="product" name="product" required>
+        <option value="">-- Choose a product --</option>
+        <option value="dumbbells">Dumbbells</option>
+        <option value="yoga-mat">Yoga Mat</option>
+        <option value="protein-powder">Protein Powder</option>
+        <option value="treadmill">Treadmill</option>
+        <option value="resistance-bands">Resistance Bands</option>
+      </select>
+
+      <!-- Quantity -->
+      <label for="quantity">Quantity</label>
+      <input type="number" id="quantity" name="quantity" min="1" required>
+
+      <!-- Name -->
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" required>
+
+      <!-- Email -->
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" required>
+
+      <!-- Address -->
+      <label for="address">Shipping Address</label>
+      <textarea id="address" name="address" required></textarea>
+
+      <!-- Submit -->
+      <button type="submit">Submit Order</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 GymPro. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
