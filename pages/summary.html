@@ -6,86 +6,75 @@
   <title>Order Summary - Furniture Haven</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
   <style>
-      body {
+    body {
       margin: 0;
       padding: 0;
-      font-family: Arial, Helvetica, sans-serif;
-       background-color: #FFE8DB;
-        color: #000000;
-      background-image:url();
+      font-family: 'Poppins', sans-serif;
+      background-color: #ffe8db;
+      color: #000000;
     }
 
-    .header{
+    .header {
       text-align: center;
       padding: 30px;
-      background:#000000;
-      color:  #fff;
+      background: #000000;
+      color: #fff;
     }
 
     .container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-      padding: 40px;
-    }
-
-    .card {
-      background: #fff;
-      padding: 20px;
+      max-width: 800px;
+      margin: 40px auto;
+      background: #ffffff;
+      padding: 30px;
       border-radius: 12px;
-      box-shadow:0 0 10px rgba(0,0,0,0.1);
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
       text-align: center;
-      transition: transform 0.2s ease-in-out;
+      color: #5682b1;
+      margin-bottom: 30px;
     }
 
-    .card:hover {
-      transform: translateY(-5px);
+    .summary-details {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #000000;
     }
 
-    .card h3 {
-      margin-bottom: 10px;
-      color: #000;;
+    .summary-details strong {
+      color: #5682b1;
     }
 
-    .card p {
-      color: #333;
-      margin: 5px 0;
-    }
-
-    .card a {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 8px 14px;
-      background: rgb(14, 12, 12);
-      color: white;
-      text-decoration: none;
+    .print-btn {
+      display: block;
+      margin: 30px auto 0;
+      padding: 12px 24px;
+      background-color: #5682b1;
+      color: #fff;
+      border: none;
       border-radius: 6px;
-      transition: background 0.2s;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s ease;
     }
 
-    .card a:hover {
-       background-color: #739EC9;
+    .print-btn:hover {
+      background-color: #739ec9;
     }
-    .design{
-        padding: 8px 14px;
-      background:rgb(251, 249, 209);
-      color:rgb(2, 2, 90);
-      text-decoration: none;
-      border-radius: 6px;
-      transition: background 0.2s;
-      text-align: center;
-    }
-    .h1{
-      font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-      font-size: 30px;
+
+    @media print {
+      .print-btn {
+        display: none;
+      }
     }
   </style>
 </head>
 <body>
 
-  <header>
-
-  </header>
+  <div class="header">
+    <h1>RoyalFitness</h1>
+  </div>
 
   <div class="container" id="bill-section">
     <h2>Order Summary</h2>
@@ -103,9 +92,9 @@
     const formattedDate = now.toLocaleString();
 
     const shopDetails = `
-      <strong>Gym Name:</strong>Royal Fitness <br>
-      <strong>Email:</strong> contact@Royalfitness.com<br>
-      <strong>Address:</strong> 123 Home Lane, Comfort City, India<br>
+      <strong>Shop Name:</strong>Royal fitness<br>
+      <strong>Email:</strong> kalegauri2024@gmail.com<br>
+      <strong>Address:</strong> 123 Pune, Maharashtra, India<br>
       <strong>Date & Time:</strong> ${formattedDate}<br><hr><br>
     `;
 
