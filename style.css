@@ -102,8 +102,8 @@ nav ul li a:hover {
 .product-card {
   background-color: #fff;
   border-radius: 10px;
-  height: 200px;
-  weight: 100px; ;
+  height: 300px;
+  weight: 150px; ;
   text-align: center;
   overflow: hidden;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
@@ -115,7 +115,7 @@ nav ul li a:hover {
 }
 
 .product-card img {
-  width: 100%;
+  width: 100px;
   height: 100px;
   object-fit: cover;
 }
