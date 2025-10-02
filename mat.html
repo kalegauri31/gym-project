@@ -5,7 +5,67 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Outdoor - Furniture Haven</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
- <link rel="stylesheet" href="style.css">
+<style>
+  /*Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Container for all products */
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Individual product card */
+.product-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-align: center;
+  padding: 10px;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+/* Product images */
+.product-card img {
+  width: 200px;
+  height: 150px;
+  object-fit: cover; /* Keeps image ratio, avoids stretching */
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+/* Product name */
+.product-card h3 {
+  font-size: 18px;
+  margin-bottom: 6px;
+  color: #1d0840;
+}
+
+/* Product price */
+.product-card p {
+  font-size: 20px;
+  color: #750c0c;
+  margin-bottom: 10px;
+}
+
+/* Buy Now button */
+.product-card a {
+  display: inline-block;
+  text-decoration: none;
+  background: #092644;
+</style>
 </head>
 <body>
   <div class="container">
@@ -15,26 +75,26 @@
     <div class="product-container">
       <!-- Product 1 -->
       <div class="product-card">
-        <img src="C:\Users\DELL\Desktop\Royal-Fitness\images\OIP (6).jpg" alt="man gloves">
-        <h3>tripple mats</h3>
+        <img src="../gym-project/images/mat3.png" alt="">
+        <h3>Set of 3 mats</h3>
         <p>₹499</p>
-        <a href="C:\Users\DELL\Desktop\Royal-Fitness\Pages\order.html">Buy Now</a>
+        <a href="../gym-project/order.html">Buy Now</a>
       </div>
       
       <!-- Product 2 -->
       <div class="product-card">
-        <img src="C:\Users\DELL\Desktop\Royal-Fitness\images\yoga mat.webp" alt="gloves">
-        <h3>set of mats</h3>
+        <img src="../gym-project/images/yoga mat1.png" alt="set of 5 mats">
+        <h3>Set of 5 mats</h3>
         <p>₹999</p>
-        <a href="C:\Users\DELL\Desktop\Royal-Fitness\Pages\order.html">Buy Now</a>
+        <a href="../gym-project/order.html">Buy Now</a>
       </div>
       
       <!-- Product 3 -->
       <div class="product-card">
-        <img src="C:\Users\DELL\Desktop\Royal-Fitness\images\Wholesale-Eco-Friendly-Printable-Elastic-6mm-TPE-1.jpg" alt="armour gloves">
-        <h3>single mat</h3>
+        <img src="../gym-project/images/yoga mat2.png" alt="single mat">
+        <h3>Single mat</h3>
         <p>₹199</p>
-        <a href="C:\Users\DELL\Desktop\Royal-Fitness\Pages\order.html">Buy Now</a>
+        <a href="../gym-project/order.html">Buy Now</a>
       </div>
     </div>
   </div>
