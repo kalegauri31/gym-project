@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gym Payment Form</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <form class="payment-form" onsubmit="return validateForm()">
+    <h2>Gym Payment</h2>
+
+    <label for="name">Full Name</label>
+    <input type="text" id="name" placeholder="Enter your name" required>
+
+    <label for="email">Email</label>
+    <input type="email" id="email" placeholder="Enter your email" required>
+
+    <label for="membership">Membership Type</label>
+    <select id="membership" required>
+      <option value="">--Select--</option>
+      <option value="monthly">Monthly - $30</option>
+      <option value="quarterly">Quarterly - $80</option>
+      <option value="yearly">Yearly - $300</option>
+    </select>
+
+    <label for="card">Card Number</label>
+    <input type="text" id="card" maxlength="16" placeholder="xxxx xxxx xxxx xxxx" required>
+
+    <label for="expiry">Expiry Date</label>
+    <input type="month" id="expiry" required>
+
+    <label for="cvv">CVV</label>
+    <input type="password" id="cvv" maxlength="3" required>
+
+    <button type="submit">Pay Now</button>
+  </form>
+
+  <script>
+    function validateForm() {
+      let card = document.getElementById("card").value;
+      if (card.length !== 16 || isNaN(card)) {
+        alert("Please enter a valid 16-digit card number");
+        return false;
+      }
+      alert("Payment Successful!");
+      return true;
+    }
+  </script>
+</body>
+</html>
