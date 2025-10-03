@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gym Payment Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #ffe8db; /* soft peach background */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+
+    .payment-form {
+      background-color: #739ec9; /* form background */
+      padding: 30px 25px;
+      border-radius: 12px;
+      width: 350px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .payment-form h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #000000; /* black heading */
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      margin-bottom: 5px;
+      font-weight: bold;
+      color: #000000;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #5682b1; /* blue border */
+      border-radius: 8px;
+      font-size: 14px;
+      background-color: #ffe8db; /* light input background */
+      color: #000000;
+    }
+
+    input::placeholder {
+      color: #888;
+    }
+
+    button {
+      margin-top: 25px;
+      width: 100%;
+      padding: 12px;
+      background-color: #5682b1; /* blue button */
+      border: none;
+      border-radius: 8px;
+      color: #fff;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #466a94;
+    }
+  </style>
+</head>
+<body>
+
+  <form class="payment-form" onsubmit="return validateForm()">
+    <h2>Gym Payment</h2>
+
+    <label for="name">Full Name</label>
+    <input type="text" id="name" placeholder="Enter your name" required>
+
+    <label for="email">Email</label>
+    <input type="email" id="email" placeholder="Enter your email" required>
+
+    <label for="membership">Membership Type</label>
+    <select id="membership" required>
+      <option value="">--Select--</option>
+      <option value="monthly">Monthly - $30</option>
+      <option value="quarterly">Quarterly - $80</option>
+      <option value="yearly">Yearly - $300</option>
+    </select>
+
+    <label for="card">Card Number</label>
+    <input type="text" id="card" maxlength="16" placeholder="xxxx xxxx xxxx xxxx" required>
+
+    <label for="expiry">Expiry Date</label>
+    <input type="month" id="expiry" required>
+
+    <label for="cvv">CVV</label>
+    <input type="password" id="cvv" maxlength="3" required>
+
+    <button type="submit">Pay Now</button>
+  </form>
+
+  <script>
+    function validateForm() {
+      const card = document.getElementById("card").value;
+      if (card.length !== 16 || isNaN(card)) {
+        alert("Please enter a valid 16-digit card number.");
+        return false;
+      }
+      alert("Payment Successful!");
+      return true;
+    }
+  </script>
+
+</body>
+</html>

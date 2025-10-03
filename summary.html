@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Order Summary - Royal Fitness</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #ffe8db;
+      color: #000000;
+    }
+
+    /* NAVBAR */
+    .navbar {
+      background-color: #000000;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .navbar .logo {
+      color: #ffe8db;
+      font-size: 24px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .nav-links ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+
+    .nav-links ul li {
+      margin-left: 20px;
+    }
+
+    .nav-links ul li a {
+      color: #ffe8db;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links ul li a:hover {
+      color: #739ec9;
+    }
+
+    /* ORDER SUMMARY */
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: #5682b1;
+      margin-bottom: 30px;
+    }
+
+    .summary-details {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #000000;
+    }
+
+    .summary-details strong {
+      color: #5682b1;
+    }
+
+    .print-btn {
+      display: block;
+      margin: 30px auto 0;
+      padding: 12px 24px;
+      background-color: #5682b1;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .print-btn:hover {
+      background-color: #739ec9;
+    }
+
+    @media print {
+      .print-btn {
+        display: none;
+      }
+    }
+
+    /* RESPONSIVE NAVBAR */
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav-links ul {
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .nav-links ul li {
+        margin: 10px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <a href="#" class="logo">Royal Fitness</a>
+    <nav class="nav-links">
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../product.html">Products</a></li>
+        <li><a href="../about.html">About Us</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <div class="container" id="bill-section">
+    <h2>Order Summary</h2>
+    <div class="summary-details" id="summary-info"></div>
+    <button class="print-btn" onclick="window.print()">Print Bill</button>
+  </div>
+
+  <!-- SCRIPT -->
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const name = params.get("name");
+    const price = parseFloat(params.get("price"));
+    const quantity = parseInt(params.get("quantity"));
+    const total = price * quantity;
+    const now = new Date();
+    const formattedDate = now.toLocaleString();
+
+    const shopDetails = `
+      <strong>Shop Name:</strong> Royal Fitness<br>
+      <strong>Email:</strong> kalegauri2024@gmail.com<br>
+      <strong>Address:</strong> 123 Home Lane, Comfort City, India<br>
+      <strong>Date & Time:</strong> ${formattedDate}<br><hr><br>
+    `;
+
+    const orderDetails = `
+      <strong>Product:</strong> ${name}<br>
+      <strong>Unit Price:</strong> ₹${price.toFixed(2)}<br>
+      <strong>Quantity:</strong> ${quantity}<br>
+      <strong>Total Price:</strong> ₹${total.toFixed(2)}<br><br>
+      <strong>Status:</strong> Payment Successful ✅
+    `;
+
+    document.getElementById("summary-info").innerHTML = shopDetails + orderDetails;
+  </script>
+
+</body>
+</html>

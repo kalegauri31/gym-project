@@ -1,27 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Page</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Page - Royal Fitness</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
   <style>
-    
     body {
       margin: 0;
       padding: 0;
-      font-family: Arial, Helvetica, sans-serif;
-       background-color: #FFE8DB;
-        color: #000000;
-      background-image:url();
+      font-family: 'Poppins', sans-serif;
+      background-color: #FFE8DB;
+      color: #000000;
     }
 
-    .header{
+    /* NAVBAR */
+    .navbar {
+      background-color: #000000;
+      padding: 12px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .navbar .logo {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    .navbar .logo img {
+      height: 50px;
+      margin-right: 10px;
+    }
+
+    .navbar .logo-text {
+      color: #FFE8DB;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .navbar .nav-links a {
+      color: #FFE8DB;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .navbar .nav-links a:hover {
+      color: #739EC9;
+    }
+
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .navbar .nav-links {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+      }
+
+      .navbar .nav-links a {
+        margin: 8px 0;
+      }
+    }
+
+    /* HEADER */
+    .header {
       text-align: center;
       padding: 30px;
-      background:#000000;
-      color:  #fff;
+      background: #000000;
+      color: #fff;
     }
 
+    /* CONTACT CARDS */
     .container {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -33,7 +91,7 @@
       background: #fff;
       padding: 20px;
       border-radius: 12px;
-      box-shadow:0 0 10px rgba(0,0,0,0.1);
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
       text-align: center;
       transition: transform 0.2s ease-in-out;
     }
@@ -44,7 +102,7 @@
 
     .card h3 {
       margin-bottom: 10px;
-      color: #000;;
+      color: #000;
     }
 
     .card p {
@@ -56,7 +114,7 @@
       display: inline-block;
       margin-top: 10px;
       padding: 8px 14px;
-      background: rgb(14, 12, 12);
+      background: #000;
       color: white;
       text-decoration: none;
       border-radius: 6px;
@@ -64,128 +122,150 @@
     }
 
     .card a:hover {
-       background-color: #739EC9;
+      background-color: #739EC9;
     }
-    .design{
-        padding: 8px 14px;
-      background:rgb(251, 249, 209);
-      color:rgb(2, 2, 90);
-      text-decoration: none;
-      border-radius: 6px;
-      transition: background 0.2s;
+
+    /* FOOTER */
+    footer {
+      background-color: #000000;
+      color: #FFE8DB;
+      padding: 40px 20px;
       text-align: center;
     }
-    .h1{
-      font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-      font-size: 30px;
+
+    .footer-top {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+
+    .footer-top div {
+      margin: 10px;
+    }
+
+    .footer-top h3 {
+      margin-bottom: 10px;
+      color: #FFE8DB;
+    }
+
+    .footer-top a {
+      color: #FFE8DB;
+      text-decoration: none;
+      display: block;
+      margin: 4px 0;
+    }
+
+    .footer-top a:hover {
+      color: #739EC9;
+    }
+
+    .social-icons img {
+      height: 30px;
+      margin: 0 8px;
+      vertical-align: middle;
+    }
+
+    .footer-bottom {
+      margin-top: 20px;
+      border-top: 1px solid #444;
+      padding-top: 10px;
+      font-size: 14px;
+    }
+    .hero{
+      text-align: center;
     }
   </style>
 </head>
 <body>
-   <header class="h1">
-            &nbsp;  
-            <a href="./index.html">&nbsp;&nbsp;&nbsp;<img src="C:\Users\DELL\Desktop\Royal-Fitness\images\images\images.jpg" width="80px" ></a>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-           <a href="C:\Users\DELL\Desktop\Royal-Fitness\index.html">Home</a>&nbsp; &nbsp; 
-           <a href="aboutus.html">About Us</a>&nbsp; &nbsp; 
-           <a href="fitness.html">Fitness</a>&nbsp; &nbsp;
-           <a href="product.html">product</a>&nbsp; &nbsp;  
-            <a href="contact1.html">Contact</a>&nbsp; &nbsp; 
-          </header>
-  <div class="header">
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+      <span class="logo-text">Royal Fitness</span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="aboutus.html">About Us</a>
+      <a href="fitness.html">Fitness</a>
+      <a href="product.html">Product</a>
+      <a href="contact1.html">Contact</a>
+    </div>
+  </header>
+
+  <!-- PAGE HEADER -->
+   <section class="hero" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.4)),url('hero-gym.jpg') center/cover no-repeat;">
     <h1>Contact Us</h1>
     <p>We’d love to hear from you. Reach out through any of the options below!</p>
-  </div>
+  </section>
 
+  <!-- CONTACT CARDS -->
   <div class="container">
-    <!-- Phone Card -->
     <div class="card">
       <h3>📞 Phone</h3>
       <p>+91 7387703142</p>
       <a href="tel:+917387703142">Call Now</a>
     </div>
 
-    <!-- Email Card -->
     <div class="card">
       <h3>📧 Email</h3>
       <p>kalegauri2024@gmail.com</p>
       <a href="mailto:kalegauri2024@gmail.com">Send Email</a>
     </div>
 
-    <!-- Location Card -->
     <div class="card">
       <h3>📍 Location</h3>
       <p>Pune, Maharashtra, India</p>
       <a href="https://maps.google.com" target="_blank">View Map</a>
     </div>
 
-    <!-- WhatsApp Card -->
     <div class="card">
       <h3>💬 WhatsApp</h3>
-      <p>+7387703142</p>
-      <a href="https://wa.me/7387703142" target="_blank">Chat Now</a>
+      <p>+91 7387703142</p>
+      <a href="https://wa.me/917387703142" target="_blank">Chat Now</a>
     </div>
+
     <div class="card">
-      <h3>🏋️Gym owners</h3>
-      <p>• Owner:kale Gauri</p>
-      <p>• Owner:pawar Riya</p>
-      <p>Gym name:Royal Fitness </p>
+      <h3>🏋️ Gym Owners</h3>
+      <p>• Kale Gauri</p>
+      <p>• Pawar Riya</p>
+      <p>Gym Name: Royal Fitness</p>
     </div>
   </div>
-  <footer class="design">
-    <footer>
-        <table>
-            <tr>
-                <th>
-                    &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;  &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;  &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;  &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;  &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;  &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;  &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;  &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;  &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;<h3><a href="./index.html">FITNEST.in</a></h3>
-                </th>
-                <th>
-                    &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;  &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;  &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;  &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;  &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;  &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;  &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;  &nbsp; &nbsp;&nbsp; &nbsp;
-                    <h3>Quick Links</h3>
-                </th>
-                <th>
-                    &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;  &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;  &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;  &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;  &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;  &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;  &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;  &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;  &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;  &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp;<h3>Resources</h3>
-                </th>
-                </tr>
 
-                <tr>
-                <th>
-                    <p>Transforming lives through fitness and</p>
-                    <P>wellness.Join our community and discover</P>
-                    <p>your peak potetial.</p>
-                    <br>
-                    <a href="">
-                    <img src="C:\Users\DELL\Desktop\Royal-Fitness\images\images\instagram.png" height="40" alt="instagram"></a>&nbsp; &nbsp;
-                    <a href=""><img src="C:\Users\DELL\Desktop\Royal-Fitness\images\images\facebook.png" height="40" alt="facebook"></a>&nbsp; &nbsp;
-                   <a href=""> <img src="C:\Users\DELL\Desktop\Royal-Fitness\images\images\twitter.png" height="40" alt="twitter"></a>&nbsp; &nbsp;
-                    <a href=""><img src="C:\Users\DELL\Desktop\Royal-Fitness\images\images\youtube.png" height="40" alt="youtube"></a>
-                </th>
-                <th>
-                    <h2>
-                    <a href="index.html">Home</a><br>&nbsp;
-                    <a href="aboutus.html">About Us</a><br>
-                    <a href="fitness.html">Fitness</a>
-                    <br>
-                      &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;<a href="product.html">Product</a>&nbsp; &nbsp; &nbsp; <br>
-                       &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;<a href="contact1.html">Contact</a>&nbsp; &nbsp; &nbsp;<br>
-        
-                    &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                    &nbsp; &nbsp;&nbsp; &nbsp;
-                    </h2>
-                </th>
-                <th>
-                    <a href="https://www.nutrition.gov/" target="_blank"><h3>Nutrition Guide</h3></a>
-                    <a href="https://www.youtube.com/watch?v=enYITYwvPAQ" target="_blank"><h3>Workout Videos</h3></a>
-                    <a href="https://www.termsfeed.com/public/uploads/2021/12/sample-privacy-policy-template.pdf" target="_blank"><h3>Privacy Policy</h3></a>
-                </th>
-            </tr>
-        </table>
-      <footer>
-    <br>
-    <hr>
-    <div>
-      <p>&copy&nbsp;RoyalFitnest.in, All rights are reserved</p>
-      <p>crafted with care by Kale Gauri & Pawar Riya</p>
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-top">
+      <div>
+        <h3>RoyalFitness.in</h3>
+        <p>Transforming lives through fitness and wellness.</p>
+        <p>Join our community and discover your peak potential.</p>
+        <div class="social-icons">
+          <a href="#"><img src="./images/instagram.png" alt="Instagram"></a>
+          <a href="#"><img src="./images/facebook.png" alt="Facebook"></a>
+          <a href="#"><img src="./images/twitter.png" alt="Twitter"></a>
+          <a href="#"><img src="./images/youtube.png" alt="YouTube"></a>
+        </div>
+      </div>
+      <div>
+        <h3>Quick Links</h3>
+        <a href="index.html">Home</a>
+        <a href="aboutus.html">About Us</a>
+        <a href="fitness.html">Fitness</a>
+        <a href="product.html">Product</a>
+        <a href="contact1.html">Contact</a>
+      </div>
+      <div>
+        <h3>Resources</h3>
+        <a href="https://www.nutrition.gov/" target="_blank">Nutrition Guide</a>
+        <a href="https://www.youtube.com/watch?v=enYITYwvPAQ" target="_blank">Workout Videos</a>
+        <a href="https://www.termsfeed.com/public/uploads/2021/12/sample-privacy-policy-template.pdf" target="_blank">Privacy Policy</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 RoyalFitness.in — All rights reserved</p>
+      <p>Crafted with care by Kale Gauri & Pawar Riya</p>
     </div>
   </footer>
+
 </body>
 </html>
